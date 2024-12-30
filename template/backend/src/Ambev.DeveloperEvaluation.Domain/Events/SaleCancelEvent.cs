@@ -12,11 +12,11 @@ namespace Ambev.DeveloperEvaluation.Domain.Events
         }
     }
 
-    public class SaleCancelEventEventHandler : INotificationHandler<SaleCancelEvent>
+    public class SaleCancelEventHandler : INotificationHandler<SaleCancelEvent>
     {
         public Task Handle(SaleCancelEvent notification, CancellationToken cancellationToken)
         {
-            Console.WriteLine($"Sale removed success! ID: {notification.SaleId}, Data: {DateTime.Now}");
+            Console.WriteLine($"Sale cancel success! ID: {notification.SaleId}, Data: {DateTime.Now}");
 
             // Exemplo: enviar notificação, atualizar kafka, etc.
 
